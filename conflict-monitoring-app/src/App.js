@@ -6,6 +6,7 @@ import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import MapComponent from './components/MapComponent';
 import PersonalPage from './components/PersonalPage';
+import Login from './components/login';
 
 const App = () => {
   return (
@@ -16,6 +17,8 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/map" element={<MapComponent />} />
             <Route path='/about' element={<PersonalPage />} />
+            <Route path='/login' element={<Login />} />
+
           </Routes>
         </div>
       </Router>
