@@ -3,11 +3,24 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+
+
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('/public/WarFon.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+
+      justify-content: center;
+      align-items: center;
   }
   
+  
   .login-form {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,6 +48,7 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px;
   }
   
   .login-form button:hover {
@@ -45,4 +59,13 @@
     margin-top: 10px;
     color: #ff0000;
   }
-  
+  .link {
+    color: gray;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: darkgray;
+}

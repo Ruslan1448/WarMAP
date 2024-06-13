@@ -1,28 +1,32 @@
-// src/pages/HomePage.js
 import React from 'react';
 import './HomePage.css';
-
 const HomePage = () => {
   return (
     <div className="home-page">
       <section className="intro">
-        <h2>Welcome to Conflict Monitoring</h2>
-        <p>Our platform provides real-time monitoring of international conflicts across the globe. Stay informed about the latest developments in conflict zones and understand the context behind each crisis.</p>
+        <div class='text'>
+          <h2>Платфома моніторингу конфліктів</h2>
+          <p>Наша платформа забезпечує моніторинг міжнародних конфліктів по всьому світу в реальному часі. Будьте в курсі останніх подій у зонах конфлікту та розумійте контекст за кожною кризою.</p>
+        </div>
+        <img src="home1.jpg" alt="Моніторинг конфліктів" />
       </section>
       
       <section className="features">
-        <h3>Features</h3>
+        <h3>Особливості</h3>
         <ul>
-          <li>Interactive map with conflict zones highlighted</li>
-          <li>Detailed information about each conflict</li>
-          <li>Regular updates and notifications</li>
-          <li>Historical data and analysis</li>
+          <li>Інтерактивна карта з підсвіченими зонами конфлікту</li>
+          <li>Детальна інформація про кожний конфлікт</li>
+          <li>Регулярні оновлення та сповіщення</li>
+          <li>Історичні дані та аналіз</li>
         </ul>
       </section>
       
       <section className="about">
-        <h3>About Us</h3>
-        <p>We are a team of dedicated researchers and developers committed to providing accurate and up-to-date information on international conflicts. Our goal is to raise awareness and promote understanding of complex global issues.</p>
+        <img src="home2.jpg" alt="Про нас" />
+        <div>
+          <h3>Про нас</h3>
+          <p>Ми - команда присвячених дослідників та розробників, які прагнуть надавати точну та актуальну інформацію про міжнародні конфлікти. Нашою метою є підвищення обізнаності та сприяння розумінню складних глобальних проблем.</p>
+        </div>
       </section>
     </div>
   );

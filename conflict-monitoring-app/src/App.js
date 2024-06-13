@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import MapComponent from './components/MapComponent';
 import PersonalPage from './components/PersonalPage';
 import Login from './components/login';
+import Register from './components/register';
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
             <Route path="/map" element={<MapComponent />} />
             <Route path='/about' element={<PersonalPage />} />
             <Route path='/login' element={<Login />} />
-
+            <Route path='/register' element={<Register />} />
           </Routes>
         </div>
       </Router>

@@ -11,14 +11,17 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/auth/users', {
+      const response = await axios.post('http://localhost:5000/auth/login', {
         username,
         password
       });
       setMessage(response.data.message);
     } catch (error) {
-      console.error('There was an error!', error);
-      setMessage('There was an error!');
+      if (error.response && error.response.data && error.response.data.message) {
+        setMessage(error.response.data.message);
+      } else {
+        setMessage('There was an error!');
+      }
     }
   };
 
@@ -39,8 +42,8 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
+        {message && <p className="message">{message}</p>}
       </form>
-      {message && <p className="message">{message}</p>}
     </div>
   );
 };
