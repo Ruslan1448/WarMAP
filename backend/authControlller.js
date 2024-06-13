@@ -1,6 +1,17 @@
 const User = require('./models/user');
+const Role = require('./models/role')
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const jwt = require('jsonwebtoken')
+const {secret} = require("./config")
+
+const generateAccesToken = (id, roles) => {
+    const payload = {
+        id,
+        roles
+    }
+    return jwt.sign(payload, secret, {expiresIn: "24h"})
+}
 
 class authController {
     async login(req, res) {
@@ -14,7 +25,9 @@ class authController {
             if (!isMatch) {
                 return res.status(401).json({ message: 'Пароль не вірний' });
             }
-            res.status(200).json({ message: 'Вхід успішний' });
+            // res.status(200).json({ message: 'Вхід успішний' });
+            const token = generateAccesToken(user._id, user.roles)
+            return res.json({token})
         } catch (error) {
 
         }
@@ -45,7 +58,7 @@ class authController {
 
     async getUser(req, res) {
         try {
-            // Логіка для отримання користувача
+  
         } catch (error) {
             // Обробка помилок
         }

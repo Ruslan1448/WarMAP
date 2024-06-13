@@ -6,7 +6,7 @@ import countries from './countries.json';
 
 const countryStyles = {
   default: {
-    fillColor: 'green',
+    fillColor: 'gray',
     weight: 2,
     opacity: 1,
     color: 'white',
@@ -14,7 +14,7 @@ const countryStyles = {
     fillOpacity: 0.7
   },
   conflict: {
-    fillColor: 'red',
+    fillColor: 'black',
     weight: 2,
     opacity: 1,
     color: 'white',

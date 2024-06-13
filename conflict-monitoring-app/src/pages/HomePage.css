@@ -48,6 +48,12 @@
   animation: slideInRight 2s ease-out;
 }
 
+.intro h2,
+.intro p{
+  animation: slideInLeft 1s ease-out;
+
+}
+
 .about img {
   animation: slideInLeft 2s ease-out;
 }

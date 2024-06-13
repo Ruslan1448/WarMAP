@@ -42,6 +42,7 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit">Login</button>
+        <a href="/register" className="link">Ще не маєете акаунту? Зареєструватись</a>
         {message && <p className="message">{message}</p>}
       </form>
     </div>
